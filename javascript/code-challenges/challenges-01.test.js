@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1
@@ -9,7 +9,7 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 ------------------------------------------------------------------------------------------------ */
 const addOne = (arr) => {
   const newArray = [];
-  arr.forEach(num => {
+  arr.forEach((num) => {
     let newValue = num + 1;
     newArray.push(newValue);
   });
@@ -26,8 +26,8 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   const newArray = [];
-  arr.forEach(String => {
-    let newValue = String + '!';
+  arr.forEach((String) => {
+    let newValue = String + "!";
     newArray.push(newValue);
   });
   return newArray;
@@ -43,7 +43,7 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 
 const allUpperCase = (arr) => {
   const newArray = [];
-  arr.forEach(String => {
+  arr.forEach((String) => {
     let newValue = String.toUpperCase();
     newArray.push(newValue);
   });
@@ -60,20 +60,14 @@ Then, write a function named `speaker` that takes in an array of strings and a c
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------ */
 
-const greeting = (word) => {
-  const newArray = [];
-  word.forEach(String => {
-    let newValue = String.toUpperCase() + '!';
-    newArray.push(newValue);
-  });
-  return newArray;
-};
+const greeting = (word) => word.toUpperCase() + '!';
 
 const speaker = (words, callback) => {
   const newArray = [];
-  words.forEach(String => {
-    let newValue = String + callback();
-    newArray.push(newValue);
+  words.forEach((string) => {
+    newArray.push(callback(string));
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -95,8 +89,8 @@ Return the modified array.
 const addValues = (arr, value) => arr.push(value);
 
 const addNumbers = (num, arr, times, callback) => {
-  while (times > 0){
-    callback(arr,num);
+  while (times > 0) {
+    callback(arr, num);
     times--;
   }
   return arr;
@@ -122,14 +116,13 @@ This function should use forEach to populate your grocery list based on the stor
 
 const createList = (availableItems) => {
   let inventory = [];
-  availableItems.forEach(function(groceryList){
+  availableItems.forEach(function (groceryList) {
     if (groceryList.available) {
       inventory.push(groceryList.name);
     }
   });
   return inventory;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
@@ -146,7 +139,19 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let output = [];
+  arr.forEach(function (element) {
+    if (element % 15 === 0) {
+      output.push("Fizz Buzz");
+    } else if (element % 3 === 0) {
+      output.push("Fizz");
+    } else if (element % 5 === 0) {
+      output.push("Buzz");
+    } else {
+      output.push(element);
+    }
+  });
+  return output;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -160,51 +165,88 @@ Run your tests from the console: jest challenges-01.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe('Testing challenge 1', () => {
-  test('It should return an array with 1 added to each value of the original array', () => {
+describe("Testing challenge 1", () => {
+  test("It should return an array with 1 added to each value of the original array", () => {
     expect(addOne([1, 2, 3, 4, 5])).toStrictEqual([2, 3, 4, 5, 6]);
   });
 });
 
-describe('Testing challenge 2', () => {
-  test('It should return an array with an exclamation point added to each value of the original array', () => {
-    expect(addExclamation(['hi', 'how', 'are', 'you'])).toStrictEqual(['hi!', 'how!', 'are!', 'you!']);
+describe("Testing challenge 2", () => {
+  test("It should return an array with an exclamation point added to each value of the original array", () => {
+    expect(addExclamation(["hi", "how", "are", "you"])).toStrictEqual([
+      "hi!",
+      "how!",
+      "are!",
+      "you!",
+    ]);
   });
 });
 
-describe('Testing challenge 3', () => {
-  test('It should return an array of uppercase strings', () => {
-    expect(allUpperCase(['hi', 'how', 'are', 'you'])).toStrictEqual(['HI', 'HOW', 'ARE', 'YOU']);
+describe("Testing challenge 3", () => {
+  test("It should return an array of uppercase strings", () => {
+    expect(allUpperCase(["hi", "how", "are", "you"])).toStrictEqual([
+      "HI",
+      "HOW",
+      "ARE",
+      "YOU",
+    ]);
   });
 });
 
-describe('Testing challenge 4', () => {
+describe("Testing challenge 4", () => {
   test('It should provide an array of strings, that get uppercased, and a "!" at the end', () => {
-    expect(speaker(['hello', '301', 'students'], greeting)).toStrictEqual(['HELLO!', '301!', 'STUDENTS!']);
+    expect(speaker(["hello", "301", "students"], greeting)).toStrictEqual([
+      "HELLO!",
+      "301!",
+      "STUDENTS!",
+    ]);
   });
 });
 
-describe('Testing challenge 5', () => {
-  test('It should add the number 8 to the array five times', () => {
+describe("Testing challenge 5", () => {
+  test("It should add the number 8 to the array five times", () => {
     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
   });
 });
 
-describe('Testing challenge 6', () => {
-  const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
+describe("Testing challenge 6", () => {
+  const inventory = [
+    { name: "apples", available: true },
+    { name: "pears", available: true },
+    { name: "oranges", available: false },
+    { name: "bananas", available: true },
+    { name: "blueberries", available: false },
+  ];
 
-  test('It should only add the available items to the list', () => {
-    expect(createList(inventory)).toStrictEqual(['apples', 'pears', 'bananas']);
+  test("It should only add the available items to the list", () => {
+    expect(createList(inventory)).toStrictEqual(["apples", "pears", "bananas"]);
     expect(createList(inventory).length).toStrictEqual(3);
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+xdescribe("Testing challenge 7", () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
-  test('It should print out messages or numbers', () => {
-    expect(fizzbuzz(inputs)).toStrictEqual([1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);
+  test("It should print out messages or numbers", () => {
+    expect(fizzbuzz(inputs)).toStrictEqual([
+      1,
+      2,
+      "Fizz",
+      4,
+      "Buzz",
+      "Fizz",
+      7,
+      8,
+      "Fizz",
+      "Buzz",
+      11,
+      "Fizz",
+      13,
+      14,
+      "Fizz Buzz",
+      16,
+    ]);
     expect(fizzbuzz(inputs).length).toStrictEqual(16);
   });
 });
