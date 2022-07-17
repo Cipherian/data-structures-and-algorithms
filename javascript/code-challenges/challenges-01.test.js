@@ -42,7 +42,12 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
+  const newArray = [];
+  arr.forEach(String => {
+    let newValue = String.toUpperCase();
+    newArray.push(newValue);
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,11 +61,19 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+  const newArray = [];
+  word.forEach(String => {
+    let newValue = String.toUpperCase() + '!';
+    newArray.push(newValue);
+  });
+  return newArray;
 };
 
 const speaker = (words, callback) => {
-  // Solution code here...
+  const newArray = [];
+  words.forEach(String => {
+    let newValue = String + callback();
+    newArray.push(newValue);
 };
 
 /* ------------------------------------------------------------------------------------------------
