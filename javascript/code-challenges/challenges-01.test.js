@@ -139,19 +139,20 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  let output = [];
-  arr.forEach(function (element) {
+  let fizzArray = [];
+  arr.forEach( (element) => {
     if (element % 15 === 0) {
-      output.push("Fizz Buzz");
+      fizzArray.push("Fizz Buzz");
     } else if (element % 3 === 0) {
-      output.push("Fizz");
+      fizzArray.push("Fizz");
     } else if (element % 5 === 0) {
-      output.push("Buzz");
+      fizzArray.push("Buzz");
     } else {
-      output.push(element);
+      fizzArray.push(element);
     }
   });
-  return output;
+  console.log(fizzArray);
+  return fizzArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -225,7 +226,7 @@ describe("Testing challenge 6", () => {
   });
 });
 
-xdescribe("Testing challenge 7", () => {
+describe("Testing challenge 7", () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test("It should print out messages or numbers", () => {
