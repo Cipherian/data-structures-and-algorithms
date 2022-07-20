@@ -171,7 +171,7 @@ const snorlaxAbilities = {
 
 const extractAbilities = (arr) => {
   let abilitiesArray = arr.map((str, idx) => {
-    return str.abilitiesArray.name;
+    return str.ability.name;
   });
   return abilitiesArray;
 };
@@ -220,9 +220,9 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
-  let statsArray = arr.map((str, idx) => {
-    let sum = str.effort + str.baseStat;
-    return str.statsArray.name + sum;
+  let statsArray = arr.map((n, idx) => {
+    let sum = n.effort + n.baseStat;
+    return ({name: n.stat.name,total: sum});
   });
   return statsArray;
 };
