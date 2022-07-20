@@ -117,7 +117,14 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 ------------------------------------------------------------------------------------------------ */
 
 const evenOdd = (arr) => {
-  // Solution code here...
+  let newArr = arr.map((n,idx) => {
+    if (typeof(n) === 'string') {
+      return 'N/A';
+    } else if(n % 2 === 0) {
+      return 'even';
+    } else return 'odd';
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -163,7 +170,10 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
-  // Solution code here...
+  let abilitiesArray = arr.map((str, idx) => {
+    return str.abilitiesArray.name;
+  });
+  return abilitiesArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -210,7 +220,11 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
-  // Solution code here...
+  let statsArray = arr.map((str, idx) => {
+    let sum = str.effort + str.baseStat;
+    return str.statsArray.name + sum;
+  });
+  return statsArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -304,7 +318,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should return an array containing only the ability names', () => {
     expect(extractAbilities(snorlaxAbilities.abilities)).toStrictEqual(['gluttony', 'cute charm', 'immunity']);
     expect(extractAbilities(snorlaxAbilities.abilities).length).toStrictEqual(3);
