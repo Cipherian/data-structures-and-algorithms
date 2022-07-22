@@ -8,7 +8,7 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   let newArray = [];
-  for (let i in newArray) {
+  for (let i in arr) {
     let ar = arr[i];
     ar = ar + 2;
     newArray.push(ar);
@@ -25,7 +25,8 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const typeNum = (arr) => {
-  // Solution code here...
+  let numberArray = arr.filter(element => typeof(element)=== 'number');
+  return numberArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,7 +38,8 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  // Solution code here...
+  let newArray = arr.filter(element => element.includes('and'));
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -49,7 +51,8 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+  let newArray = arr.filter(element =>(element % 2!==0));
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
