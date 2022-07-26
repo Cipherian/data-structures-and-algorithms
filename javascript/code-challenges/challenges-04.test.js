@@ -21,13 +21,8 @@ function lower(str) {
   return str.toLowerCase();
 }
 
-const updateAnimal = (arr, callback) => {
-  let newArr = [];
-  arr.forEach(strings => {
-    newArr.push(callback(strings));
-  });
-  return newArr;
-};
+const updateAnimal = (arr, callback) => arr.map(strings => callback(strings));
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -68,9 +63,7 @@ In this alphabetization, capital letters come before lower case letters.
 For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
-const alphabetize = (arr) => {
-  // Solution code here...
-};
+const alphabetize = (arr) => arr.sort((a,b) => a.charCodeAt(0) - b.charCodeAt(0) );
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -85,10 +78,7 @@ Here is an example of the input:
 ];
 ------------------------------------------------------------------------------------------------ */
 
-const sortByPrice = (arr) => {
-  // Solution code here...
-};
-
+const sortByPrice = (arr) => arr.sort((a,b) => a.price - b.price);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
 
