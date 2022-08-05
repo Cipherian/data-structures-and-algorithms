@@ -22,8 +22,9 @@ For example:
 Returns: ['dyoll', 'eimaj'];
 ------------------------------------------------------------------------------------------------ */
 
-const getNames = (arr) => arr.map(obj => obj.name.split('').reduce((acc,cValue) => cValue + acc));
-
+const getNames = (arr) =>
+  arr.map((obj) => obj.name.split('').reduce((acc, cValue) => cValue + acc));
+// const getNames2 = (arr) => arr.map(obj => obj.name.split('').reverse().join(''));
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -31,7 +32,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 ------------------------------------------------------------------------------------------------ */
 
-const appendTheEnd = (str) => `${str} The end.`
+const appendTheEnd = (str) => `${str} The end.`;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -63,7 +64,7 @@ addBirthYearProperty(octavia, 1947);
 console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 ------------------------------------------------------------------------------------------------ */
 
-const addBirthYearProperty = (obj, year) => obj.yearBorn = year;
+const addBirthYearProperty = (obj, year) => (obj.yearBorn = year);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
@@ -78,7 +79,8 @@ setStatusAsAuthor(people);
 console.log(people[1].isAuthor) prints true
 ------------------------------------------------------------------------------------------------ */
 
-const setStatusAsAuthor = (people) => people.forEach((person) => person.isAuthor = true)
+const setStatusAsAuthor = (people) =>
+  people.forEach((person) => (person.isAuthor = true));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
@@ -101,6 +103,13 @@ const append = (arr1, arr2) => {
   }
 };
 
+// const append2 = (arr1, arr2) =>
+//   arr2.forEach((value) => {
+//     arr1.push(value);
+//   });
+
+// console.log(append2);
+
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
@@ -114,7 +123,12 @@ Run your tests from the console: jest challenges-02.test.js
 
 describe('Testing challenge 1', () => {
   test('It returns an array of names reversed', () => {
-    expect(getNames([{name:'lloyd', age: 32, shoeSize: 12}, {name:'jamie', age:21, shoeSize: 8}])).toStrictEqual(['dyoll', 'eimaj']);
+    expect(
+      getNames([
+        { name: 'lloyd', age: 32, shoeSize: 12 },
+        { name: 'jamie', age: 21, shoeSize: 8 },
+      ])
+    ).toStrictEqual(['dyoll', 'eimaj']);
     expect(getNames([])).toStrictEqual([]);
   });
 });
@@ -149,7 +163,11 @@ describe('Testing challenge 4', () => {
 
 describe('Testing challenge 5', () => {
   test('It should add a property to every object in an array', () => {
-    const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
+    const a = [
+      { fullName: 'Octavia Butler' },
+      { fullName: 'Ray Bradbury' },
+      { fullName: 'Kurt Vonnegut' },
+    ];
     setStatusAsAuthor(a);
 
     expect(a[0].isAuthor).toStrictEqual(true);
