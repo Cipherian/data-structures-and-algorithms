@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
@@ -55,54 +55,54 @@ Write a function named returnNames that, given the Star Wars data, below, uses r
 
 let starWarsData = [
   {
-    name: "Luke Skywalker",
-    height: "172",
-    mass: "77",
-    hair_color: "blond",
-    skin_color: "fair",
-    eye_color: "blue",
-    birth_year: "19BBY",
-    gender: "male",
+    name: 'Luke Skywalker',
+    height: '172',
+    mass: '77',
+    hair_color: 'blond',
+    skin_color: 'fair',
+    eye_color: 'blue',
+    birth_year: '19BBY',
+    gender: 'male',
   },
   {
-    name: "C-3PO",
-    height: "167",
-    mass: "75",
-    hair_color: "n/a",
-    skin_color: "gold",
-    eye_color: "yellow",
-    birth_year: "112BBY",
-    gender: "n/a",
+    name: 'C-3PO',
+    height: '167',
+    mass: '75',
+    hair_color: 'n/a',
+    skin_color: 'gold',
+    eye_color: 'yellow',
+    birth_year: '112BBY',
+    gender: 'n/a',
   },
   {
-    name: "R2-D2",
-    height: "96",
-    mass: "32",
-    hair_color: "n/a",
-    skin_color: "white, blue",
-    eye_color: "red",
-    birth_year: "33BBY",
-    gender: "n/a",
+    name: 'R2-D2',
+    height: '96',
+    mass: '32',
+    hair_color: 'n/a',
+    skin_color: 'white, blue',
+    eye_color: 'red',
+    birth_year: '33BBY',
+    gender: 'n/a',
   },
   {
-    name: "Darth Vader",
-    height: "202",
-    mass: "136",
-    hair_color: "none",
-    skin_color: "white",
-    eye_color: "yellow",
-    birth_year: "41.9BBY",
-    gender: "male",
+    name: 'Darth Vader',
+    height: '202',
+    mass: '136',
+    hair_color: 'none',
+    skin_color: 'white',
+    eye_color: 'yellow',
+    birth_year: '41.9BBY',
+    gender: 'male',
   },
   {
-    name: "Leia Organa",
-    height: "150",
-    mass: "49",
-    hair_color: "brown",
-    skin_color: "light",
-    eye_color: "brown",
-    birth_year: "19BBY",
-    gender: "female",
+    name: 'Leia Organa',
+    height: '150',
+    mass: '49',
+    hair_color: 'brown',
+    skin_color: 'light',
+    eye_color: 'brown',
+    birth_year: '19BBY',
+    gender: 'female',
   },
 ];
 // arr.reduce((acc,cValue) => acc.push(cValue.name), []);
@@ -120,7 +120,7 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (str) => str.split("").reduce((a, b) => b + a, "");
+const reversedString = (str) => str.split('').reduce((a, b) => b + a, '');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -130,44 +130,44 @@ Write a function named countNumberOfChildren that, given the array of characters
 
 const characters = [
   {
-    name: "Eddard",
-    spouse: "Catelyn",
-    children: ["Robb", "Sansa", "Arya", "Bran", "Rickon"],
-    house: "Stark",
+    name: 'Eddard',
+    spouse: 'Catelyn',
+    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+    house: 'Stark',
   },
   {
-    name: "Jon",
-    spouse: "Lysa",
-    children: ["Robin"],
-    house: "Arryn",
+    name: 'Jon',
+    spouse: 'Lysa',
+    children: ['Robin'],
+    house: 'Arryn',
   },
   {
-    name: "Cersei",
-    spouse: "Robert",
-    children: ["Joffrey", "Myrcella", "Tommen"],
-    house: "Lannister",
+    name: 'Cersei',
+    spouse: 'Robert',
+    children: ['Joffrey', 'Myrcella', 'Tommen'],
+    house: 'Lannister',
   },
   {
-    name: "Daenarys",
-    spouse: "Khal Drogo",
-    children: ["Drogon", "Rhaegal", "Viserion"],
-    house: "Targaryen",
+    name: 'Daenarys',
+    spouse: 'Khal Drogo',
+    children: ['Drogon', 'Rhaegal', 'Viserion'],
+    house: 'Targaryen',
   },
   {
-    name: "Mace",
-    spouse: "Alerie",
-    children: ["Margaery", "Loras"],
-    house: "Tyrell",
+    name: 'Mace',
+    spouse: 'Alerie',
+    children: ['Margaery', 'Loras'],
+    house: 'Tyrell',
   },
   {
-    name: "Sansa",
-    spouse: "Tyrion",
-    house: "Stark",
+    name: 'Sansa',
+    spouse: 'Tyrion',
+    house: 'Stark',
   },
   {
-    name: "Jon",
+    name: 'Jon',
     spouse: null,
-    house: "Snow",
+    house: 'Snow',
   },
 ];
 
@@ -231,30 +231,30 @@ const snorlaxData = {
   stats: [
     {
       stat: {
-        url: "https://pokeapi.co/api/v2/stat/6/",
-        name: "speed",
+        url: 'https://pokeapi.co/api/v2/stat/6/',
+        name: 'speed',
       },
       effort: 5,
       baseStat: 30,
     },
     {
       stat: {
-        url: "https://pokeapi.co/api/v2/stat/5/",
-        name: "special-defense",
+        url: 'https://pokeapi.co/api/v2/stat/5/',
+        name: 'special-defense',
       },
       effort: 2,
       baseStat: 110,
     },
     {
       stat: {
-        url: "https://pokeapi.co/api/v2/stat/4/",
-        name: "special-attack",
+        url: 'https://pokeapi.co/api/v2/stat/4/',
+        name: 'special-attack',
       },
       effort: 9,
       baseStat: 65,
     },
   ],
-  name: "snorlax",
+  name: 'snorlax',
   weight: 4600,
 };
 
@@ -276,7 +276,7 @@ Write a function named extractChildren that, given the array of characters from 
 
 const extractChildren = (arr) => {
   return arr
-    .filter((character) => character.name.indexOf("a") >= 0)
+    .filter((character) => character.name.indexOf('a') >= 0)
     .reduce((acc, current) => {
       if (current.children) {
         return acc.concat(current.children);
@@ -295,103 +295,103 @@ DO NOT CHANGE any of the below code.
 Run your tests from the console: jest challenges-09.test.js
 ------------------------------------------------------------------------------------------------ */
 
-describe("Testing challenge 1", () => {
-  test("It should convert object to full name string", () => {
+describe('Testing challenge 1', () => {
+  test('It should convert object to full name string', () => {
     const people = [
-      { firstName: "Jane", lastName: "Doe" },
-      { firstName: "James", lastName: "Bond" },
+      { firstName: 'Jane', lastName: 'Doe' },
+      { firstName: 'James', lastName: 'Bond' },
     ];
 
-    expect(toLastNames(people)).toStrictEqual(["Jane Doe", "James Bond"]);
+    expect(toLastNames(people)).toStrictEqual(['Jane Doe', 'James Bond']);
   });
 });
 
-describe("Testing challenge 2", () => {
-  test("It should add the values of an array", () => {
+describe('Testing challenge 2', () => {
+  test('It should add the values of an array', () => {
     expect(addValues([1, 2, 3, 4, 5])).toStrictEqual(15);
     expect(addValues([])).toStrictEqual(0);
     expect(addValues([1, 2, 3, 4, -5])).toStrictEqual(5);
   });
 });
 
-describe("Testing challenge 3", () => {
-  test("It should add the purchase price", () => {
+describe('Testing challenge 3', () => {
+  test('It should add the purchase price', () => {
     expect(
       addPurchases([
-        { item: "switch", purchasePrice: 399 },
-        { item: "toothpaste", purchasePrice: 2 },
+        { item: 'switch', purchasePrice: 399 },
+        { item: 'toothpaste', purchasePrice: 2 },
       ])
     ).toStrictEqual(401);
     expect(addPurchases([])).toStrictEqual(0);
   });
 });
 
-describe("Testing challenge 4", () => {
-  test("It should return the length of the array", () => {
+describe('Testing challenge 4', () => {
+  test('It should return the length of the array', () => {
     expect(countNumberOfElements([1, 2, 3, 4, 5])).toStrictEqual(5);
   });
 });
 
-describe("Testing challenge 5", () => {
-  test("It should return an array continaing the names of the characters", () => {
+describe('Testing challenge 5', () => {
+  test('It should return an array continaing the names of the characters', () => {
     expect(returnNames(starWarsData)).toStrictEqual([
-      "Luke Skywalker",
-      "C-3PO",
-      "R2-D2",
-      "Darth Vader",
-      "Leia Organa",
+      'Luke Skywalker',
+      'C-3PO',
+      'R2-D2',
+      'Darth Vader',
+      'Leia Organa',
     ]);
     expect(returnNames(starWarsData).length).toStrictEqual(5);
   });
 });
 
-describe("Testing challenge 6", () => {
-  test("It should return the string with the characters in reverse order", () => {
-    expect(reversedString("Code 301")).toStrictEqual("103 edoC");
+describe('Testing challenge 6', () => {
+  test('It should return the string with the characters in reverse order', () => {
+    expect(reversedString('Code 301')).toStrictEqual('103 edoC');
   });
 });
 
-describe("Testing challenge 7", () => {
-  test("It should return the total number of children", () => {
+describe('Testing challenge 7', () => {
+  test('It should return the total number of children', () => {
     expect(countNumberOfChildren(characters)).toStrictEqual(14);
   });
 });
 
-describe("Testing challenge 8", () => {
-  test("It should return the average of the numbers in the array", () => {
+describe('Testing challenge 8', () => {
+  test('It should return the average of the numbers in the array', () => {
     expect(calculateAverage([18, 290, 37, 4, 55, 16, 7, 85])).toStrictEqual(64);
   });
 });
 
-describe("Testing challenge 9", () => {
-  test("It should return a count of the prime numbers in the array", () => {
+describe('Testing challenge 9', () => {
+  test('It should return a count of the prime numbers in the array', () => {
     expect(countPrimeNumbers([1, 2, 13, 64, 45, 56, 17, 8])).toStrictEqual(3);
   });
 });
 
-describe("Testing challenge 10", () => {
-  test("It should return any stats that match the input", () => {
-    expect(extractStat("speed", snorlaxData.stats)).toStrictEqual({
-      stat: { url: "https://pokeapi.co/api/v2/stat/6/", name: "speed" },
+describe('Testing challenge 10', () => {
+  test('It should return any stats that match the input', () => {
+    expect(extractStat('speed', snorlaxData.stats)).toStrictEqual({
+      stat: { url: 'https://pokeapi.co/api/v2/stat/6/', name: 'speed' },
       effort: 5,
       baseStat: 30,
     });
   });
 });
 
-describe("Testing challenge 11", () => {
-  test("It should return an array containing the names of the children", () => {
+describe('Testing challenge 11', () => {
+  test('It should return an array containing the names of the children', () => {
     expect(extractChildren(characters)).toStrictEqual([
-      "Robb",
-      "Sansa",
-      "Arya",
-      "Bran",
-      "Rickon",
-      "Drogon",
-      "Rhaegal",
-      "Viserion",
-      "Margaery",
-      "Loras",
+      'Robb',
+      'Sansa',
+      'Arya',
+      'Bran',
+      'Rickon',
+      'Drogon',
+      'Rhaegal',
+      'Viserion',
+      'Margaery',
+      'Loras',
     ]);
     expect(extractChildren(characters).length).toStrictEqual(10);
   });
