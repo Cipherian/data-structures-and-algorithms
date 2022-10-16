@@ -1,5 +1,5 @@
 import pytest
-from data_structures.linked_list import LinkedList
+from data_structures.linked_list import LinkedList, DoublyLinkedList
 
 
 def test_exists():
@@ -62,6 +62,38 @@ def test_includes_true():
 
     assert linked_list.includes("apple")
 
+def test_doubly_includes_true():
+    linked_list = DoublyLinkedList()
+
+    linked_list.push("apple")
+
+    linked_list.push("banana")
+
+    assert linked_list.includes("apple")
+
+def test_doubly_prints():
+    double_linked = DoublyLinkedList()
+
+    double_linked.push("fish")
+
+    double_linked.push("fishy")
+
+    double_linked.push("fishier")
+
+    assert str(double_linked) == "fishierfishyfish"
+
+def test_doubly_append():
+    double_linked = DoublyLinkedList()
+
+    double_linked.push("fish")
+
+    double_linked.push("fishy")
+
+    double_linked.push("fishier")
+
+    double_linked.append('42')
+
+    assert str(double_linked) == "fishierfishyfish42"
 
 
 def test_includes_false():
