@@ -7,11 +7,9 @@ class Node:
         self.value = value
         self.next = next
 
-    def __str__(self):
-        return str(self.value)
+    # def __str__(self):
+    #     return str(self.value)
 
-    def __repr__(self):
-        return f'<Node: Value = {self.value} | Next = {self.next}>'
 
 class LinkedList:
 
@@ -23,7 +21,6 @@ class LinkedList:
         current = self.head
         while current is not None:
             string += f'{{ {current.value} }} -> '
-            # string.strip(',')
             current = current.next
         string += 'NULL'
         return string
