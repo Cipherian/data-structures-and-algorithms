@@ -27,7 +27,7 @@ def test_populated_head():
 def test_to_string_empty():
     linked_list = LinkedList()
 
-    assert str(linked_list) == "NULL"
+    assert str(linked_list) == "NONE"
 
 
 
@@ -36,20 +36,46 @@ def test_to_string_single():
 
     linked_list.insert("apple")
 
-    assert str(linked_list) == "{ apple } -> NULL"
+    assert str(linked_list) == "{ apple } -> NONE"
 
 
+def test_linked_list_append():
+    linked_list = LinkedList()
+
+    linked_list.append("apple")
+
+    assert str(linked_list) == "{ apple } -> NONE"
+
+def test_linked_list_insert_before():
+    linked_list = LinkedList()
+
+    linked_list.insert(1)
+    linked_list.insert(3)
+    linked_list.insert(4)
+    linked_list.insert_before(3, 5)
+
+    assert str(linked_list) == '{ 4 } -> { 5 } -> { 3 } -> { 1 } -> NONE'
+
+def test_linked_list_insert_after():
+    linked_list = LinkedList()
+
+    linked_list.insert(1)
+    linked_list.insert(2)
+    linked_list.insert(3)
+    linked_list.insert_after(2, 4)
+
+    assert str(linked_list) == "apple"
 
 def test_to_string_double():
     linked_list = LinkedList()
 
     linked_list.insert("apple")
 
-    assert str(linked_list) == "{ apple } -> NULL"
+    assert str(linked_list) == "{ apple } -> NONE"
 
     linked_list.insert("banana")
 
-    assert str(linked_list) == "{ banana } -> { apple } -> NULL"
+    assert str(linked_list) == "{ banana } -> { apple } -> NONE"
 
 
 
@@ -70,6 +96,7 @@ def test_doubly_includes_true():
     linked_list.push("banana")
 
     assert linked_list.includes("apple")
+
 
 def test_doubly_prints():
     double_linked = DoublyLinkedList()
@@ -94,6 +121,7 @@ def test_doubly_append():
     double_linked.append('42')
 
     assert str(double_linked) == "fishierfishyfish42"
+
 
 
 def test_includes_false():
