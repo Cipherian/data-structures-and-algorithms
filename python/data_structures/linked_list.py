@@ -1,9 +1,9 @@
 class Node:
     """initialization of node class"""
 
-    def __init__(self, value):
+    def __init__(self, value, next=None):
         self.value = value
-        self.next = None
+        self.next = next
         self.prev = None
 
     # def __str__(self):
@@ -50,40 +50,28 @@ class LinkedList:
 
         if current is None:
             self.head = node
-
-        while current:
-            if current.next is None:
-                current.next = node
-            else:
+        else:
+            while current.next is not None:
                 current = current.next
-
-    # def insert_before(self, value, new_value):
-    #     # inserts new_value before the specified value
-    #     current = self.head
-    #     node = Node(new_value)
-    #
-    #     if current is None:
-    #         self.head = node
-    #     while current:
-    #         if current.next == value:
-    #             current = node
-    #         else:
-    #             current = current.next
+            current.next = node
 
     def insert_before(self, value, new_value):
-        # create new node
+        #insert before specified value
         new_node = Node(new_value)
-        # find target node to insert
         current = self.head
-        if current is None:
-            self.head = new_node
-        else:
-            # search nodes
-            if current.value == value:
-                new_node.next = self.head
-                self.head = new_node
+        if self.head is None:
+            raise TargetError('Empty list')
 
-            while current.next is not None:
+        if not self.includes(value):
+            raise TargetError('Value not found')
+
+            # search nodes
+        if current.value == value:
+            new_node.next = self.head
+            self.head = new_node
+
+        else:
+            while current.next:
                 if current.next.value == value:
                     new_node.next = current.next
                     current.next = new_node
@@ -91,54 +79,23 @@ class LinkedList:
                 else:
                     current = current.next
 
-    # def insert_after(self, new_value, position):
-    #
-    #     # 1. allocate node to new element
-    #     new_node = Node(new_value)
-    #
-    #     # 2. check if the position is > 0
-    #     if position < 1:
-    #         print("\nposition should be >= 1.")
-    #     elif position == 1:
-    #
-    #         # 3. if the position is 1, make next of the
-    #         #   new node as head and new node as head
-    #         new_node.next = self.head
-    #         self.head = new_node
-    #     else:
-    #
-    #         # 4. Else, make a temp node and traverse to the
-    #         #   node previous to the position
-    #         temp = self.head
-    #         for i in range(1, position - 1):
-    #             if temp is None:
-    #                 temp = temp.next
-    #
-    #                 # 5. If the previous node is not null, make
-    #         #   new_node next as temp next and temp next
-    #         #   as new_node.
-    #         if temp is None:
-    #             new_node.next = temp.next
-    #             temp.next = new_node
-    #         else:
-    #
-    #             # 6. When the previous node is null
-    #             print("\nThe previous node is null.")
+    def insert_after(self, value, new_value):
+        ## inserts new value after specified value
+        current = self.head
+        if current is None:
+            raise TargetError('Empty list')
 
-                # def insert_after(self, value, new_value):
-    #     # inserts new_value after the specified value
-    #     current = self.head
-    #     node = Node(new_value)
-    #
-    #     if current is None:
-    #         self.head = node
-    #     while current:
-    #         if current == value:
-    #             node.next = current.next
-    #             current.next = node
-    #             return
-    #         else:
-    #             current = current.next
+        if not self.includes(value):
+            raise TargetError('Value not found')
+
+        while current:
+            if current.value is value:
+                node = Node(new_value, current.next )
+                current.next = node
+                break
+            else:
+                current = current.next
+
 
 class DoublyLinkedList:
     def __init__(self,):
@@ -203,5 +160,9 @@ class DoublyLinkedList:
         return False
 
 
-class TargetError:
-    pass
+class TargetError(Exception):
+    def __init__(self, message):
+        self.message = message
+
+    def __str__(self):
+        return self.message
