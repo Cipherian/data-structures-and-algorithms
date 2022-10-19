@@ -8,6 +8,8 @@
 
 - Code Challenge 3: [binary_search](./code_challenges/code-challenge3/README.md)
 
+-Code Challenge 4: [linked_list_insertion](./code_challenges/code-challenge4/README.md)
+
 ## Data Structures and Algorithms
 
 - Linked lists: [Linked_lists](./data_structures/linked_list.py)
