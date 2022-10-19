@@ -64,7 +64,7 @@ def test_linked_list_insert_after():
     linked_list.insert(3)
     linked_list.insert_after(2, 4)
 
-    assert str(linked_list) == "apple"
+    assert str(linked_list) == '{ 3 } -> { 2 } -> { 4 } -> { 1 } -> NONE'
 
 def test_to_string_double():
     linked_list = LinkedList()
