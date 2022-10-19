@@ -19,3 +19,9 @@
 - `__str__` prints a string representation of the linked_list class
 
 - "includes" checks if the current value is equal to the value passed in the parameter and returns true.
+
+## Linked list insertion group whiteboard
+
+- Worked on by: Daniel, Natalija, Alejandro
+
+-[LLWhiteboard](./Untitled%20(1).png)
