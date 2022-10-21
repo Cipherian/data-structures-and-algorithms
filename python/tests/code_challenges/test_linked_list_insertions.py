@@ -1,7 +1,12 @@
 import pytest
-from data_structures.linked_list import LinkedList, TargetError
+import inspect
+from data_structures.linked_list import LinkedList, TargetError, DoublyLinkedList
 
 
+def test_double_list_static():
+    linked_list = DoublyLinkedList()
+    is_static = isinstance(inspect.getattr_static(linked_list, "list_print"), staticmethod)
+    assert is_static == True
 
 def test_append():
     linked_list = LinkedList()

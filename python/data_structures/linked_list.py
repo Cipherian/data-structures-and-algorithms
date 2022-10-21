@@ -96,6 +96,24 @@ class LinkedList:
             else:
                 current = current.next
 
+    def kth_from_end(self, k):
+        length = 0
+        current = self.head
+
+        while current:
+            length += 1
+            current = current.next
+
+        if k > length or k < 0 or k == length:
+            raise TargetError('Invalid k input')
+
+        temp = self.head
+
+        for i in range(1, length - k):
+            temp = temp.next
+
+        return temp.value
+
 
 class DoublyLinkedList:
     def __init__(self,):
@@ -146,9 +164,9 @@ class DoublyLinkedList:
 
     @staticmethod
     def list_print(node):
-            while node is not None:
-                print(node.value)
-                node = node.next
+         while node is not None:
+            print(node.value)
+            node = node.next
 
     def includes(self, value)  :
         current = self.head
