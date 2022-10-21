@@ -24,4 +24,10 @@
 
 - Worked on by: Daniel, Natalija, Alejandro
 
--[LLWhiteboard](./Untitled%20(1).png)
+-[LLWhiteboard](.images/LL.png)
+
+## Linked list kth_from_end group whiteboard
+
+- Worked on by: Daniel, Natalija, Andy
+
+- [kthfromend](./images/kthfromend.jpg)
