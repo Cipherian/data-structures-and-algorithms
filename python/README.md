@@ -19,3 +19,5 @@
 ## Data Structures and Algorithms
 
 - Linked lists: [Linked_lists](./data_structures/linked_list.py)
+
+- Stack and Queue: [Stack_and_Queue](./data_structures/README_FOLDER/stack_and_queue.md)
