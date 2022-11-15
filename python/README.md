@@ -16,6 +16,8 @@
 
 - Code Challenge 8: [linked_list_zip](./code_challenges/code-challenge8/README.md)
 
+- Code Challenge 13: [validate_brackets](./code_challenges/code-challenge13/README.md)
+
 ## Data Structures and Algorithms
 
 - Linked lists: [Linked_lists](./data_structures/linked_list.py)
