@@ -4,6 +4,8 @@
 
 - 11/19/2022
 
+- find maximum 11/21/2022
+
 ## Class Binary Tree
 
 - pre_order method:
@@ -29,6 +31,10 @@
   - Uses recursion to walk left, then to the right in the tree then append the root value.
 
 - Then returns to the root of the tree and appends that value.
+
+- find_maximum value: Traverses the tree and returns the highest numeric value of that tree
+
+[find_maximum](./images/find_maximum.jpg)
 
 ## Class Binary Search Tree
 
