@@ -36,6 +36,7 @@ class BinaryTree:
 
     def __init__(self, root=None):
         self.root = root
+        self.max_value = float('-inf')
 
     def pre_order(self):
         values = []
@@ -81,6 +82,20 @@ class BinaryTree:
         walk(self.root)
 
         return values
+
+    def traverse_tree(self, root):
+        if not root:
+            return
+
+        if root.value > self.max_value:
+            self.max_value = root.value
+            self.traverse_tree(root.left)
+            self.traverse_tree(root.right)
+
+    def find_maximum_value(self):
+        self.traverse_tree(self.root)
+        return self.max_value
+
 
 
 class Node:
