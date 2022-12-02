@@ -16,7 +16,7 @@ class KaryTree:
             node = queue.dequeue()
             collection.append(node.value)
             for child in node.children:
-                queue.enqueue(child)l
+                queue.enqueue(child)
 
         return collection
 
