@@ -2,6 +2,9 @@ def zip_lists(a, b):
     linkedlist1 = a.head
     linkedlist2 = b.head
 
+    if linkedlist1 is None or linkedlist2 is None:
+        return a or b
+
     while linkedlist1 and linkedlist2:
         temp1 = linkedlist1.next
         temp2 = linkedlist2.next
