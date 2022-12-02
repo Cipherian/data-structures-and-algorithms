@@ -15,9 +15,9 @@ class AnimalShelter:
             return "That is not a cat or a dog."
 
     def dequeue(self, animal):
-        if animal is "cat":
+        if animal == "cat":
             return self.cat.dequeue()
-        if animal is "dog":
+        if animal == "dog":
             return self.dog.dequeue()
         else:
             return None
