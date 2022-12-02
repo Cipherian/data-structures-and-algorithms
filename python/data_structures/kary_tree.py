@@ -16,7 +16,7 @@ class KaryTree:
             node = queue.dequeue()
             collection.append(node.value)
             for child in node.children:
-                queue.enqueue(child)
+                queue.enqueue(child)l
 
         return collection
 
@@ -24,6 +24,6 @@ class KaryTree:
 class Node:
     """K-Ary Tree Node"""
 
-    def __init__(self, value):
+    def __init__(self, value=None):
         self.value = value
         self.children = []
