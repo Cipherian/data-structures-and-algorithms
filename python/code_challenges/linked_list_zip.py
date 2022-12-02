@@ -1,9 +1,13 @@
+from data_structures.linked_list import LinkedList
+
 def zip_lists(a, b):
     linkedlist1 = a.head
     linkedlist2 = b.head
 
-    if linkedlist1 is None or linkedlist2 is None:
-        return None
+    if linkedlist1 is None and linkedlist2:
+        return LinkedList(linkedlist2)
+    if linkedlist2 is None and linkedlist1:
+        return LinkedList(linkedlist1)
 
     while linkedlist1 and linkedlist2:
         temp1 = linkedlist1.next
