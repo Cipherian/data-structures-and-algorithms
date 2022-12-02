@@ -7,17 +7,17 @@ class AnimalShelter:
         self.dog = Queue()
 
     def enqueue(self, animal):
-        if animal.value is "cat":
+        if animal.value == "cat":
             self.cat.enqueue(animal)
-        if animal.value is "dog":
+        if animal.value == "dog":
             self.dog.enqueue(animal)
         else:
             return "That is not a cat or a dog."
 
     def dequeue(self, animal):
-        if animal is "cat":
+        if animal == "cat":
             return self.cat.dequeue()
-        if animal is "dog":
+        if animal == "dog":
             return self.dog.dequeue()
         else:
             return None
