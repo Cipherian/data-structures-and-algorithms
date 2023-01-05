@@ -2,6 +2,10 @@
 
 - Author: Daniel Brott
 
+- Whiteboard [animal_shelter](./images/animalshelter.jpg)
+
+- Code: [animal_shelter](../stack_queue_animal_shelter.py)
+
 ## Functionality
 
 - Initializes a class Animal shelter
