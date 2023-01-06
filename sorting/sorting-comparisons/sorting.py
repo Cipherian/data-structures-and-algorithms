@@ -30,7 +30,6 @@ def sort_by_title(movies):
 
 
 def sort_by_year(movies):
-    # Create a new list with each dictionary as a tuple (year, movie)
     movie_list = [movie for movie in movies]
     sorted_list = []
 
