@@ -2,6 +2,8 @@
 
 - Author: Daniel Brott
 
+- Code: [Hash_Tables](../hashtable.py)
+
 ## Challenge: Implement a hash table with Python
 
 ## Approach & Efficiency
