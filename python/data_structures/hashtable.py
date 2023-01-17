@@ -1,7 +1,4 @@
 class Hashtable:
-    """
-    Put docstring here
-    """
 
     def __init__(self, size:int = 1024):
         self.size = size
@@ -10,7 +7,7 @@ class Hashtable:
 
 
     def hash_function(self, key: str):
-        return sum(ord(c) * self.prime**i for i, c in enumerate(key[::-1])) % self.size
+        return sum(ord(char) * self.prime**idx for idx, char in enumerate(key[::-1])) % self.size
 
 
     def set(self, key: str, value: any):
