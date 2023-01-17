@@ -18,6 +18,8 @@
 
 - Code Challenge 13: [validate_brackets](./code_challenges/code-challenge13/README.md)
 
+- Code Challenge 31: [Hashmap_repeated_word](./code_challenges/hashmap-repeated_word/README.md)
+
 ## Data Structures and Algorithms
 
 - Linked lists: [Linked_lists](./data_structures/linked_list.py)
@@ -29,3 +31,5 @@
 - Binary Search Tree: [Binary_Search_Tree](./data_structures/README_FOLDER/binary_tree.md)
 
 - Breadth first: [Breadth_first](./code_challenges/breadth-first/README.md)
+
+- Hash Map: [Hashmaps](./data_structures/hashtable.py)
