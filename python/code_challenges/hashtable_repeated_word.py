@@ -1,7 +1,7 @@
 import re
 
 
-def first_repeated_word(words:str) -> str | None:
+def first_repeated_word(words:str) -> any:
     dictionary = {}
     words = re.sub(r'[^a-zA-Z\s]', '', words.lower())
     split_words = words.split()
