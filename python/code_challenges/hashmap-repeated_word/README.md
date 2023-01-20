@@ -9,7 +9,7 @@
 ## Functionality
 
 - First repeated word method:
-
+.
   - Uses a dictionary/hashing to store data
 
   - Uses regex to filter words in the parameter
