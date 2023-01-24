@@ -20,6 +20,8 @@
 
 - Code Challenge 31: [Hashmap_repeated_word](./code_challenges/hashmap-repeated_word/README.md)
 
+- Code Challenge hashtable left join: [Hashmap_left_join](./code_challenges/hashtable_left_join.py)
+
 ## Data Structures and Algorithms
 
 - Linked lists: [Linked_lists](./data_structures/linked_list.py)
