@@ -1,6 +1,3 @@
-
-
-
 def left_join(map1, map2):
     result = []
     for key in map1.keys():
