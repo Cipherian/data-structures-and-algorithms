@@ -18,7 +18,7 @@ class Graph:
     def get_nodes(self):
         return self.adj_list
 
-    def add_edge(self, start: str, vertex: str, weight: int = 0):
+    def add_edge(self, start: any, vertex: any, weight: int = 0):
         if start not in self.adj_list or vertex not in self.adj_list:
             raise KeyError("Both 'start' and 'vertex' must be present in the graph.")
 
@@ -27,17 +27,16 @@ class Graph:
             if node == start:
                 node.neighbors.append(new_edge)
 
-    def get_neighbors(self, vertex):
+
+    def get_neighbors(self, neighbor):
         for node in self.adj_list:
-            if node == vertex:
+            if node == neighbor:
                 return node.neighbors
-
-
 
 class Vertex:
     def __init__(self, value, neighbors = None):
         self.value = value
-        self.neighbors = neighbors if neighbors is not None else []
+        self.neighbors = neighbors if neighbors else []
 
     def __str__(self):
         return self.value
