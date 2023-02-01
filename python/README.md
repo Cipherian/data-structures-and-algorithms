@@ -36,4 +36,4 @@
 
 - Hash Map: [Hashmaps](./data_structures/hashtable.py)
 
-- Graph: [Graph](./data_structures/graph.py)git
+- Graph: [Graph](./data_structures/graph.py)
