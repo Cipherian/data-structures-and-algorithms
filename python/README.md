@@ -35,3 +35,5 @@
 - Breadth first: [Breadth_first](./code_challenges/breadth-first/README.md)
 
 - Hash Map: [Hashmaps](./data_structures/hashtable.py)
+
+- Graph: [Graph](./data_structures/graph.py)git
