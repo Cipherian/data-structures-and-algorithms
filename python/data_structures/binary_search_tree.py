@@ -51,8 +51,7 @@ class BinarySearchTree(BinaryTree):
 
         walk(self.root, node)
 
-    def contains(self, value):
-        contains_list = []
+    def contains(self, value = None):
 
         def walk(root, node):
             if root is None:
@@ -60,7 +59,7 @@ class BinarySearchTree(BinaryTree):
 
             if root:
                 if root.value == value:
-                    contains_list.append(node)
+                  value = root.value
                 else:
                     if value < root.value:
                         if root.left:
@@ -71,7 +70,7 @@ class BinarySearchTree(BinaryTree):
 
         walk(self.root, None)
 
-        if contains_list:
+        if value is not None:
             return True
         else:
             return False

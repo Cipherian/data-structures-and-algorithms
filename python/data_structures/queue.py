@@ -9,6 +9,9 @@ class Queue:
         self.front = front
         self.back = back
 
+    def __str__(self):
+        return str(self.front.value, self.back.value)
+
     def is_empty(self):
         if self.front is None:
             return True
@@ -51,3 +54,4 @@ class Node:
 
     def __repr__(self):
         return repr(self)
+
