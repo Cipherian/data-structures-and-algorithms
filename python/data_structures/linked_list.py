@@ -16,8 +16,6 @@ class LinkedList:
         self.head = head
 
     def __str__(self):
-        # print(LinkedList)
-        # LinkedList.__str__()
         string = ""
         current = self.head
         while current is not None:
@@ -25,6 +23,16 @@ class LinkedList:
             current = current.next
         string += 'NONE'
         return string
+
+    def delete(self):
+        if self.head is None:
+            raise TargetError('Empty list')
+
+        current = self.head
+        while current.next is not None:
+            current = current.next
+        current.value = current.next.value
+        current.next = current.next.next
 
     def insert(self, value):
         node_item = Node(value)
