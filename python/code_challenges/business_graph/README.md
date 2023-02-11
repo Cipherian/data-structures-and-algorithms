@@ -3,6 +3,8 @@
 - Author: Daniel brott
 
 - Code: [Business_Graph_Trip](../graph_business_trip.py)
+- 
+- Whiteboard: [Business_Graph_Whitebarod(./images/business_graph.jpg)
 
 ## Feature Tasks
 
