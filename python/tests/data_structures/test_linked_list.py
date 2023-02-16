@@ -1,5 +1,5 @@
 import pytest
-from data_structures.linked_list import LinkedList, DoublyLinkedList
+from data_structures.linked_list import LinkedList
 
 
 def test_exists():
@@ -88,41 +88,6 @@ def test_includes_true():
 
     assert linked_list.includes("apple")
 
-def test_doubly_includes_true():
-    linked_list = DoublyLinkedList()
-
-    linked_list.push("apple")
-
-    linked_list.push("banana")
-
-    assert linked_list.includes("apple")
-
-
-def test_doubly_prints():
-    double_linked = DoublyLinkedList()
-
-    double_linked.push("fish")
-
-    double_linked.push("fishy")
-
-    double_linked.push("fishier")
-
-    assert str(double_linked) == "fishierfishyfish"
-
-def test_doubly_append():
-    double_linked = DoublyLinkedList()
-
-    double_linked.push("fish")
-
-    double_linked.push("fishy")
-
-    double_linked.push("fishier")
-
-    double_linked.append('42')
-
-    assert str(double_linked) == "fishierfishyfish42"
-
-
 
 def test_includes_false():
     linked_list = LinkedList()
@@ -132,3 +97,23 @@ def test_includes_false():
     linked_list.insert("banana")
 
     assert not linked_list.includes("cucumber")
+
+
+def test_linked_list_add_one():
+    ll = LinkedList()
+    ll.append(9)
+    ll.append(9)
+    ll.append(9)
+    ll.add_one_to_ll()
+
+    assert str(ll) == "{ 1 } -> { 0 } -> { 0 } -> { 0 } -> NONE"
+
+
+def test_linked_list_add_one_2():
+    ll = LinkedList()
+    ll.append(2)
+    ll.append(3)
+    ll.append(4)
+    ll.add_one_to_ll()
+
+    assert str(ll) == "{ 2 } -> { 3 } -> { 5 } -> NONE"
