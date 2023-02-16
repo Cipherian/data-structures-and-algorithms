@@ -109,6 +109,15 @@ def test_linked_list_add_one():
     assert str(ll) == "{ 1 } -> { 0 } -> { 0 } -> { 0 } -> NONE"
 
 
+def test_linked_list_add_one3():
+    ll = LinkedList()
+    ll.append(4)
+    ll.append(9)
+    ll.append(9)
+    ll.add_one_to_ll()
+
+    assert str(ll) == "{ 5 } -> { 0 } -> { 0 } -> NONE"
+
 def test_linked_list_add_one_2():
     ll = LinkedList()
     ll.append(2)
